@@ -189,17 +189,17 @@ export const AvailableSizes = [
 ];
 
 export const firebaseConfig = {
-  apiKey: "API_KEY",
-  authDomain: "AUTH_DOMAIN",
-  projectId: "PROJECT_ID",
-  storageBucket: "STROAGE_BUCKET",
-  messagingSenderId: "MESSAGING_SENDER_ID",
-  appId: "APP_ID",
-  measurementId: "MEASUREMENT_ID",
+  apiKey: "AIzaSyB4ueWeAITgrofhqbcpRcWNtdWANtzhpUM",
+  authDomain: "ssb-automations.firebaseapp.com",
+  projectId: "ssb-automations",
+  storageBucket: "ssb-automations.appspot.com",
+  messagingSenderId: "764868890336",
+  appId: "1:764868890336:web:f5cfecafa20e3e94480a85",
+  measurementId: "G-4L8V3GPBGJ"
 };
 
 export const firebaseStroageURL =
-  "YOUR_FIREBASE_STROAGE_URL";
+  "gs://ssb-automations.appspot.com";
 
 export const addNewAddressFormControls = [
   {
