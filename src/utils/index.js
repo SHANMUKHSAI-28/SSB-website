@@ -199,7 +199,7 @@ export const firebaseConfig = {
 };
 
 export const firebaseStroageURL =
-  "gs://ssb-automations.appspot.com";
+  "gs://ssb-automations.appspot.com/ecommerce";
 
 export const addNewAddressFormControls = [
   {
