@@ -117,13 +117,13 @@ export default function Home() {
             <li>
               <div className="relative block group">
                 <img
-                  src="https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/Images%2Fcoverimages%2Fretrocover.jpg?alt=media&token=e8cd4e49-bca2-405b-a6f6-462c37189fba"
                   className="object-cover w-full aspect-square"
                 />
                 <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                  <h3 className="text-xl font-medium text-white">KIDS</h3>
+                  <h3 className="text-xl font-medium text-white">RetroFit</h3>
                   <button
-                    onClick={() => router.push("/product/listing/kids")}
+                    onClick={() => router.push("/product/listing/RetroFit")}
                     className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                   >
                     Shop Now
@@ -134,13 +134,13 @@ export default function Home() {
             <li>
               <div className="relative block group">
                 <img
-                  src="https://images.unsplash.com/photo-1624623278313-a930126a11c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/Images%2Fcoverimages%2Fsmartswitches.png?alt=media&token=6fe730f6-516e-4aa2-a4c8-8b11e2aa5dd5"
                   className="object-cover w-full aspect-square"
                 />
                 <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                  <h3 className="text-xl font-medium text-white">WOMEN</h3>
+                  <h3 className="text-xl font-medium text-white">SmartSwitches</h3>
                   <button
-                    onClick={() => router.push("/product/listing/women")}
+                    onClick={() => router.push("/product/listing/SmartSwitches")}
                     className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                   >
                     Shop Now
@@ -151,13 +151,13 @@ export default function Home() {
             <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <div className="relative block group">
                 <img
-                  src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+                  src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/Images%2Fcoverimages%2Fsecurity.png?alt=media&token=453869e8-e817-41b5-9c23-be298dcd8c62"
                   className="object-cover w-full aspect-square"
                 />
                 <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                  <h3 className="text-xl font-medium text-white">MEN</h3>
+                  <h3 className="text-xl font-medium text-white">SmartSwitches</h3>
                   <button
-                    onClick={() => router.push("/product/listing/men")}
+                    onClick={() => router.push("/product/listing/SmartSwitches")}
                     className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                   >
                     Shop Now

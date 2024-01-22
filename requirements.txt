@@ -1,0 +1,1 @@
+npm i bcryptjs firebase joi js-cookie jsonwebtoken mongoose react-toastify stripe @stripe/stripe-js @headlessui/react
