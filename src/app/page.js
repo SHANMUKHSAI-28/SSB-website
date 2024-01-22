@@ -31,7 +31,7 @@ export default function Home() {
         <div className="grid max-w-screen-xl px-4 py-8 mx-suto  lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
-              Best Fashion Collection
+              Smart Space Builder Automations
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
               Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo
@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img
-              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/Images%2Feditlogo-removebg-preview.png?alt=media&token=76212f85-a71e-4df0-bf7f-0a21b9b0a982"
               alt="Explore Shop Collection"
             />
           </div>
