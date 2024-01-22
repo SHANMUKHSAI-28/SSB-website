@@ -15,14 +15,14 @@ export const navOptions = [
     path: "/product/listing/RetroFit",
   },
   {
-    id: "listingWomen",
-    label: "Women",
-    path: "/product/listing/women",
+    id: "listingSmartSwitches",
+    label: "SmartSwitches",
+    path: "/product/listing/SmartSwitches",
   },
   {
-    id: "listingKids",
-    label: "kids",
-    path: "/product/listing/kids",
+    id: "listingSecurity",
+    label: "Security",
+    path: "/product/listing/Security",
   },
 ];
 
