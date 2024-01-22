@@ -10,9 +10,9 @@ export const navOptions = [
     path: "/product/listing/all-products",
   },
   {
-    id: "listingMen",
-    label: "Men",
-    path: "/product/listing/men",
+    id: "listingRetroFit",
+    label: "RetroFit",
+    path: "/product/listing/RetroFit",
   },
   {
     id: "listingWomen",
@@ -127,8 +127,8 @@ export const adminAddProductformControls = [
     componentType: "select",
     options: [
       {
-        id: "men",
-        label: "Men",
+        id: "RetroFit",
+        label: "RetroFit",
       },
       {
         id: "women",
