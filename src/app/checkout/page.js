@@ -129,7 +129,7 @@ export default function Checkout() {
 
     const createLineItems = cartItems.map((item) => ({
       price_data: {
-        currency: "usd",
+        currency: "inr",
         product_data: {
           images: [item.productID.imageUrl],
           name: item.productID.name,
