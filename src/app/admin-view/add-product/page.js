@@ -61,7 +61,7 @@ const initialFormData = {
   name: "",
   price: 0,
   description: "",
-  category: "men",
+  category: "RetroFit",
   sizes: [],
   deliveryInfo: "",
   onSale: "no",
