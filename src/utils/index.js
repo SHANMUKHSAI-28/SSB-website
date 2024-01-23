@@ -131,12 +131,12 @@ export const adminAddProductformControls = [
         label: "RetroFit",
       },
       {
-        id: "women",
-        label: "Women",
+        id: "SmartSwitches",
+        label: "SmartSwitches",
       },
       {
-        id: "kids",
-        label: "Kids",
+        id: "Security",
+        label: "Security",
       },
     ],
   },
