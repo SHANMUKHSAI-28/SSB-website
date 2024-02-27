@@ -3,8 +3,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 
 First run this command in terminal to install dependencies
-
+```
 npm i bcryptjs firebase joi js-cookie jsonwebtoken mongoose react-toastify stripe @stripe/stripe-js @headlessui/react
+```
 
 First, run the development server:
 
