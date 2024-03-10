@@ -1,9 +1,11 @@
-import { Fragment, useState, useEffect, useContext } from "react";
-import Cookies from "js-cookie";
-import { usePathname, useRouter } from "next/navigation";
+"use client";
+
 import { GlobalContext } from "@/context";
 import { adminNavOptions, navOptions } from "@/utils";
+import { Fragment, useContext, useEffect } from "react";
 import CommonModal from "../CommonModal";
+import Cookies from "js-cookie";
+import { usePathname, useRouter } from "next/navigation";
 import CartModal from "../CartModal";
 
 function NavItems({ isModalView = false, isAdminView, router }) {
@@ -56,10 +58,10 @@ export default function Navbar() {
     setShowCartModal
   } = useContext(GlobalContext);
 
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
   const pathName = usePathname();
   const router = useRouter();
+
+  console.log(currentUpdatedProduct, "navbar");
 
   useEffect(() => {
     if (
@@ -79,13 +81,6 @@ export default function Navbar() {
 
   const isAdminView = pathName.includes("admin-view");
 
-  // Function to handle search query
-  const handleSearch = () => {
-    // Perform search logic here, for now, let's just log the search query
-    console.log("Search query:", searchQuery);
-    // You can further implement the search logic here, such as fetching search results from an API
-  };
-
   return (
     <>
       <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200">
@@ -94,7 +89,7 @@ export default function Navbar() {
             onClick={() => router.push("/")}
             className="flex items-center cursor-pointer"
           >
-            <span className="self-center text-2xl font-semibold whitespace-nowrap">
+            <span className="slef-center text-2xl font-semibold whitespace-nowrap">
               S S B AUTOMATIONS
             </span>
           </div>
@@ -102,14 +97,18 @@ export default function Navbar() {
             {!isAdminView && isAuthUser ? (
               <Fragment>
                 <button
-                  className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
-                  onClick={() => router.push("/account")}
+                  className={
+                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                  }
+                  onClick={()=>router.push('/account')}
                 >
                   Account
                 </button>
                 <button
-                  className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
-                  onClick={() => setShowCartModal(true)}
+                  className={
+                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                  }
+                  onClick={()=> setShowCartModal(true)}
                 >
                   Cart
                 </button>
@@ -118,7 +117,9 @@ export default function Navbar() {
             {user?.role === "admin" ? (
               isAdminView ? (
                 <button
-                  className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                  className={
+                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                  }
                   onClick={() => router.push("/")}
                 >
                   Client View
@@ -126,7 +127,9 @@ export default function Navbar() {
               ) : (
                 <button
                   onClick={() => router.push("/admin-view")}
-                  className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                  className={
+                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                  }
                 >
                   Admin View
                 </button>
@@ -135,35 +138,22 @@ export default function Navbar() {
             {isAuthUser ? (
               <button
                 onClick={handleLogout}
-                className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                className={
+                  "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                }
               >
                 Logout
               </button>
             ) : (
               <button
                 onClick={() => router.push("/login")}
-                className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                className={
+                  "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                }
               >
                 Login
               </button>
             )}
-            {/* Search input */}
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="px-3 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <button
-                className="absolute inset-y-0 right-0 px-4 py-1 bg-gray-200 text-gray-600 hover:text-gray-800"
-                onClick={handleSearch}
-              >
-                Search
-              </button>
-            </div>
-
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
@@ -181,9 +171,9 @@ export default function Navbar() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fillRule="evenodd"
+                  fill-rule="evenodd"
                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clipRule="evenodd"
+                  clip-rule="evenodd"
                 ></path>
               </svg>
             </button>
