@@ -34,8 +34,7 @@ export default function Home() {
               Smart Space Builder Automations
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
-              Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo
-              lacus meleifend menean diverra loremous.
+              Your Space,Upgraded
             </p>
 
             <button
