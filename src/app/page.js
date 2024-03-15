@@ -47,7 +47,7 @@ export default function Home() {
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/Images%2Feditlogo-removebg-preview.png?alt=media&token=76212f85-a71e-4df0-bf7f-0a21b9b0a982"
+              src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/new%20logos%2F2.png?alt=media&token=fd8b38d0-2dca-46df-b408-66f665f43fe8"
               alt="Get Started"
             />
           </div>
