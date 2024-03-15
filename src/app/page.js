@@ -42,13 +42,13 @@ export default function Home() {
               onClick={() => router.push("/product/listing/all-products")}
               className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
             >
-              Explore Shop Collection
+              Get Started
             </button>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/Images%2Feditlogo-removebg-preview.png?alt=media&token=76212f85-a71e-4df0-bf7f-0a21b9b0a982"
-              alt="Explore Shop Collection"
+              alt="Get Started"
             />
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function Home() {
               <div className="max-w-md mx-auto text-center lg:text-left">
                 <div>
                   <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-                    Summer Sale Collection
+                    Newly launched
                   </h2>
                 </div>
                 <button
