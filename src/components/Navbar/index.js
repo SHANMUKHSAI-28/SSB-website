@@ -11,8 +11,8 @@ import CartModal from "../CartModal";
 // Define the new options
 const extendedNavOptions = [
   ...navOptions,
-  { id: "internships", label: "Internships", path: "https://your-internship-google-form-link" },
-  { id: "contact-us", label: "Contact Us", path: "https://your-contact-us-google-form-link" }
+  { id: "internships", label: "Internships", path: "https://forms.gle/i1aMbu5EGJJ1xkJL6" },
+  { id: "contact-us", label: "Contact Us", path: "https://forms.gle/CXjtYSaMdsY2izm67" }
 ];
 
 function NavItems({ isModalView = false, isAdminView, router }) {
