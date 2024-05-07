@@ -8,6 +8,13 @@ import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
 import CartModal from "../CartModal";
 
+// Define the new options
+const extendedNavOptions = [
+  ...navOptions,
+  { id: "internships", label: "Internships", path: "https://your-internship-google-form-link" },
+  { id: "contact-us", label: "Contact Us", path: "https://your-contact-us-google-form-link" }
+];
+
 function NavItems({ isModalView = false, isAdminView, router }) {
   return (
     <div
@@ -31,11 +38,11 @@ function NavItems({ isModalView = false, isAdminView, router }) {
                 {item.label}
               </li>
             ))
-          : navOptions.map((item) => (
+          : extendedNavOptions.map((item) => ( // Render extendedNavOptions
               <li
                 className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0"
                 key={item.id}
-                onClick={() => router.push(item.path)}
+                onClick={() => window.open(item.path, "_blank")} // Open link in new tab
               >
                 {item.label}
               </li>
@@ -197,3 +204,4 @@ export default function Navbar() {
     </>
   );
 }
+
