@@ -34,7 +34,7 @@ export default function Home() {
               Smart Space Builder Automations
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
-              Your Space,Upgraded
+              Your Space, Upgraded
             </p>
 
             <button
@@ -52,6 +52,105 @@ export default function Home() {
             />
           </div>
         </div>
+
+        {/* Added Services Section */}
+        <div className="site-section">
+          <div className="container">
+            <div className="row mb-5">
+              <div className="col-12 text-center" data-aos="fade-up">
+                <h2 className="heading font-weight-bold mb-3">Our Services</h2>
+              </div>
+            </div>
+            <div className="row align-items-stretch">
+              <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+                <div className="unit-4 d-flex">
+                  <div className="unit-4-icon mr-4">
+                    <span className="feather-pen-tool"></span>
+                  </div>
+                  <div>
+                    <h3>Modern Design</h3>
+                    <p>We Design the best Products</p>
+                    <p><a href="#">Learn More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div className="unit-4 d-flex">
+                  <div className="unit-4-icon mr-4">
+                    <span className="feather-layers"></span>
+                  </div>
+                  <div>
+                    <h3>High Performance</h3>
+                    <p>Products Which Give High Performance With low Power Consumption.</p>
+                    <p><a href="#">Learn More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div className="unit-4 d-flex">
+                  <div className="unit-4-icon mr-4">
+                    <span className="feather-layout"></span>
+                  </div>
+                  <div>
+                    <h3>Customized Products</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p><a href="#">Learn More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div className="unit-4 d-flex">
+                  <div className="unit-4-icon mr-4">
+                    <span className="feather-life-buoy"></span>
+                  </div>
+                  <div>
+                    <h3>Free Support</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p><a href="#">Learn More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div className="unit-4 d-flex">
+                  <div className="unit-4-icon mr-4">
+                    <span className="feather-shopping-bag"></span>
+                  </div>
+                  <div>
+                    <h3>Cool Pricing</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p><a href="#">Learn More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+                <div className="unit-4 d-flex">
+                  <div className="unit-4-icon mr-4">
+                    <span className="feather-smartphone"></span>
+                  </div>
+                  <div>
+                    <h3>Mobile Apps</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p><a href="#">Learn More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Promotional Section */}
+        <div className="site-section overlay site-cover-2" style={{ backgroundImage: `url('images/img_v_3-min.jpg')` }}>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-7 mx-auto text-center">
+                <h2 className="text-white mb-4">Get this template for free! :)</h2>
+                <p className="mb-0"><a href="https://untree.co/" rel="noopener" className="btn btn-primary">Get it for free!</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* End of added section */}
+        
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
             <div className="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
