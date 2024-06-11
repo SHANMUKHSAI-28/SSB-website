@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <main className='flex min-h-screen flex-col mt-[80px]'>
             {children}
-            <ContactUs />
+            
           </main>
           <Footer />
         </GlobalState>
