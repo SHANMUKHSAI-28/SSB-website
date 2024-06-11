@@ -12,7 +12,7 @@ import CartModal from "../CartModal";
 const extendedNavOptions = [
   ...navOptions,
   { id: "internships", label: "Internships", path: "https://forms.gle/i1aMbu5EGJJ1xkJL6" },
-  { id: "contact-us", label: "Contact Us", path: "https://forms.gle/CXjtYSaMdsY2izm67" }
+  { id: "contact-us", label: "Contact Us", path: "https://docs.google.com/forms/d/e/1FAIpQLScj52_62GUDX1FPdBsm-HPuw_CgH9l5RmVxh-ZNuBSIYfoxVA/viewform?usp=sf_link" }
 ];
 
 function NavItems({ isModalView = false, isAdminView, router }) {
