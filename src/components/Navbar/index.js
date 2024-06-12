@@ -92,14 +92,15 @@ export default function Navbar() {
     <>
       <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <div
-            onClick={() => router.push("/")}
-            className="flex items-center cursor-pointer"
+        <div
+          onClick={() => router.push("/")}
+          className="flex items-center cursor-pointer"
           >
-            <span className="slef-center text-2xl font-semibold whitespace-nowrap">
-              S S B AUTOMATIONS
-            </span>
+          <span className="self-center text-2xl font-semibold whitespace-nowrap" style={{ fontFamily: 'Helvetica' }}>
+            S S B AUTOMATIONS
+          </span>
           </div>
+
           <div className="flex md:order-2 gap-2">
             {!isAdminView && isAuthUser ? (
               <Fragment>
