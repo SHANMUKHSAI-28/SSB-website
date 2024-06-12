@@ -80,7 +80,7 @@ export default function Orders() {
                               Total paid amount
                             </p>
                             <p className="mr-3 text-2xl  font-semibold text-gray-900">
-                              ${item.totalPrice}
+                            ₹{item.totalPrice}
                             </p>
                           </div>
                         </div>
