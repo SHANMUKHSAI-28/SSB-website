@@ -3,9 +3,10 @@
 
 import { useRef, useState } from 'react';
 
-const ContactUs = () => {
+const ContactUs = ({ userID }) => {
   const nameRef = useRef();
   const emailRef = useRef();
+  const mobileRef = useRef();
   const messageRef = useRef();
   const [responseMessage, setResponseMessage] = useState('');
 
@@ -18,8 +19,10 @@ const ContactUs = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        userID,  // Pass the userID if applicable
         name: nameRef.current.value,
         email: emailRef.current.value,
+        mobile: mobileRef.current.value,
         message: messageRef.current.value,
       }),
     });
@@ -33,6 +36,7 @@ const ContactUs = () => {
 
     nameRef.current.value = '';
     emailRef.current.value = '';
+    mobileRef.current.value = '';
     messageRef.current.value = '';
   };
 
@@ -57,6 +61,16 @@ const ContactUs = () => {
             id="email"
             className="w-full px-3 py-2 border rounded"
             ref={emailRef}
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 mb-2" htmlFor="mobile">Mobile</label>
+          <input
+            type="text"
+            id="mobile"
+            className="w-full px-3 py-2 border rounded"
+            ref={mobileRef}
             required
           />
         </div>

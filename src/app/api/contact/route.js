@@ -1,16 +1,18 @@
 // src/app/api/contact/route.js
-import connectToDB from '@/lib/dbConnect';
+import connectToDB from '@/database';
 import Contact from '@/models/Contact';
 
 export async function POST(req) {
-  const { name, email, message } = await req.json();
+  const { userID, name, email, mobile, message } = await req.json();
 
   await connectToDB();
 
   try {
     const contact = new Contact({
+      userID,  // Assuming userID is passed from the client
       name,
       email,
+      mobile,
       message,
     });
 
