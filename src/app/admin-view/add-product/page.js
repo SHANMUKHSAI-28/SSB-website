@@ -37,7 +37,7 @@ const createUniqueFileName = (getFile) => {
 
 async function helperForUPloadingImageToFirebase(file) {
   const getFileName = createUniqueFileName(file);
-  const storageReference = ref(storage, `ssbautomations/${getFileName}`);
+  const storageReference = ref(storage, `ecommerce/${getFileName}`);
   const uploadImage = uploadBytesResumable(storageReference, file);
 
   return new Promise((resolve, reject) => {
