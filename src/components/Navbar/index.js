@@ -7,13 +7,13 @@ import CommonModal from "../CommonModal";
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
 import CartModal from "../CartModal";
-import ContactUs from "../contact/contact";
 
 // Define the new options
 const extendedNavOptions = [
   ...navOptions,
   { id: "internships", label: "Internships", path: "https://forms.gle/i1aMbu5EGJJ1xkJL6" },
-  { id: "contact-us", label: "Contact Us", path: "https://docs.google.com/forms/d/e/1FAIpQLScj52_62GUDX1FPdBsm-HPuw_CgH9l5RmVxh-ZNuBSIYfoxVA/viewform?usp=sf_link" }
+  { id: "contact-us", label: "Contact Us", path: "https://docs.google.com/forms/d/e/1FAIpQLScj52_62GUDX1FPdBsm-HPuw_CgH9l5RmVxh-ZNuBSIYfoxVA/viewform?usp=sf_link" },
+  { id: "aboutus", label: "About Us", path: "/aboutus" }, // Adjusted path to client-side navigation
 ];
 
 function NavItems({ isModalView = false, isAdminView, router }) {
@@ -25,7 +25,7 @@ function NavItems({ isModalView = false, isAdminView, router }) {
       id="nav-items"
     >
       <ul
-        className={`flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-white ${
+        className={`flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-white ${
           isModalView ? "border-none" : "border border-gray-100"
         }`}
       >
@@ -43,7 +43,7 @@ function NavItems({ isModalView = false, isAdminView, router }) {
               <li
                 className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0"
                 key={item.id}
-                onClick={() => window.location.href = item.path} // Open link in same tab
+                onClick={() => item.path.startsWith('/') ? router.push(item.path) : window.location.href = item.path} // Use router.push for internal links
               >
                 {item.label}
               </li>
@@ -91,33 +91,33 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <div
-          onClick={() => router.push("/")}
-          className="flex items-center cursor-pointer"
+      <nav className="bg-white fixed w-full z-0 top-0 left-0 border-b border-gray">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
+          <div
+            onClick={() => router.push("/")}
+            className="flex items-center cursor-pointer"
           >
-          <span className="self-center text-2xl font-semibold whitespace-nowrap" style={{ fontFamily: 'Helvetica' }}>
-            S S B AUTOMATIONS
-          </span>
+            <span className="self-center text-2xl font-semibold whitespace-nowrap" style={{ fontFamily: 'Helvetica' }}>
+              SSB AUTOMATIONS
+            </span>
           </div>
 
-          <div className="flex md:order-2 gap-2">
+          <div className="flex md:order-0 gap-2">
             {!isAdminView && isAuthUser ? (
               <Fragment>
                 <button
                   className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                   }
-                  onClick={()=>router.push('/account')}
+                  onClick={() => router.push('/account')}
                 >
                   Account
                 </button>
                 <button
                   className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                   }
-                  onClick={()=> setShowCartModal(true)}
+                  onClick={() => setShowCartModal(true)}
                 >
                   Cart
                 </button>
@@ -127,7 +127,7 @@ export default function Navbar() {
               isAdminView ? (
                 <button
                   className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                   }
                   onClick={() => router.push("/")}
                 >
@@ -137,7 +137,7 @@ export default function Navbar() {
                 <button
                   onClick={() => router.push("/admin-view")}
                   className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                   }
                 >
                   Admin View
@@ -148,7 +148,7 @@ export default function Navbar() {
               <button
                 onClick={handleLogout}
                 className={
-                  "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                  "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                 }
               >
                 Logout
@@ -157,7 +157,7 @@ export default function Navbar() {
               <button
                 onClick={() => router.push("/login")}
                 className={
-                  "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                  "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                 }
               >
                 Login
@@ -180,9 +180,9 @@ export default function Navbar() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
             </button>
@@ -206,4 +206,3 @@ export default function Navbar() {
     </>
   );
 }
-
