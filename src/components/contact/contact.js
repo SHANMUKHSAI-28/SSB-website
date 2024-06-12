@@ -1,5 +1,5 @@
 // components/contact/contact.js
-'use client';  // Ensure this component is treated as a client-side component
+'use client';
 
 import { useRef, useState } from 'react';
 
@@ -31,7 +31,6 @@ const ContactUs = () => {
       setResponseMessage('Error submitting the form');
     }
 
-    // Clear the form fields
     nameRef.current.value = '';
     emailRef.current.value = '';
     messageRef.current.value = '';
