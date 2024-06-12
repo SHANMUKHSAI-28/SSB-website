@@ -267,7 +267,7 @@ export default function Checkout() {
             <div className="flex items-center justify-between">
               <p className="text-sm font-medium text-gray-900">Subtotal</p>
               <p className="text-lg font-bold text-gray-900">
-                $
+              ₹
                 {cartItems && cartItems.length
                   ? cartItems.reduce(
                       (total, item) => item.productID.price + total,
