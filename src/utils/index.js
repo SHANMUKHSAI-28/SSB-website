@@ -61,7 +61,7 @@ export const registrationFormControls = [
     label: "Password",
     componentType: "input",
   },
-  {
+  /*{
     id: "role",
     type: "",
     placeholder: "",
@@ -77,7 +77,7 @@ export const registrationFormControls = [
         label: "customer",
       },
     ],
-  },
+  },*/
 ];
 
 export const loginFormControls = [
