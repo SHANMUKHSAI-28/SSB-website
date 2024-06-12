@@ -1,8 +1,4 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
-
-// Load environment variables from .env file
-dotenv.config();
 
 const configOptions = {
   useNewUrlParser: true,
@@ -10,7 +6,7 @@ const configOptions = {
 };
 
 const connectToDB = async () => {
-  const connectionUrl = process.env.MONGODB_URI;
+  const connectionUrl ="mongodb+srv://shanmukhsai:dattu4396@cluster0.9qmzldg.mongodb.net/";
 
   mongoose
     .connect(connectionUrl, configOptions)
