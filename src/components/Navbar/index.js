@@ -7,6 +7,7 @@ import CommonModal from "../CommonModal";
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
 import CartModal from "../CartModal";
+import ContactUs from "../contact/contact";
 
 // Define the new options
 const extendedNavOptions = [
@@ -42,7 +43,7 @@ function NavItems({ isModalView = false, isAdminView, router }) {
               <li
                 className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0"
                 key={item.id}
-                onClick={() => window.open(item.path, "_blank")} // Open link in new tab
+                onClick={() => window.location.href = item.path} // Open link in same tab
               >
                 {item.label}
               </li>
