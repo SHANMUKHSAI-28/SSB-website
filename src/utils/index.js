@@ -12,7 +12,7 @@ export const navOptions = [
       { id: "all-products", label: "All Products", path: "/product/listing/all-products" }, 
       { id: "retrofit", label: "Retrofit", path: "/product/listing/RetroFit" },
       { id: "smart-switches", label: "Smart Switches", path: "/product/listing/SmartSwitches" }, 
-      { id: "security", label: "Security", path: "/retrofit-security" } 
+      { id: "security", label: "Security", path: "/product/listing/Security" } 
     ] 
   },
   { id: "internships", label: "Internships", path: "https://forms.gle/i1aMbu5EGJJ1xkJL6" },
