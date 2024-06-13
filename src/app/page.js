@@ -28,12 +28,12 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <section className="">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-suto  lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-center lg:col-span-7">
-          <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl helvetica">
+  <section className="">
+    <div className="grid max-w-screen-xl px-4 py-0 mx-auto -mt-8 lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
+      <div className="mr-auto place-self-center lg:col-span-7">
+        <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl helvetica">
           SSB Automations
-            </h1>
+        </h1>
             <p className="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
               Your Space,Upgraded
             </p>
