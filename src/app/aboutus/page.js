@@ -1,10 +1,8 @@
-import Navbar from "@/components/Navbar";
 import Notification from "@/components/Notification";
 
 export default function AboutUs() {
   return (
     <>
-      <Navbar />
       <div className="mt-16 bg-white"> {/* Update background color */}
         <div className="text-black py-24">
           <div className="container mx-auto px-4">
