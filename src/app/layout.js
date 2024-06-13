@@ -1,8 +1,3 @@
-// layout.js
-
-// Add the "use client" pragma at the top of the file
-"use client";
-
 import GlobalState from '@/context'
 import './globals.css'
 import { Inter } from 'next/font/google'
