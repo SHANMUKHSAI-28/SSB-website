@@ -19,12 +19,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <GlobalState>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1080280280607971"
+          <Navbar />
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1080280280607971"
      crossorigin="anonymous"></script>
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1080280280607971"
      crossorigin="anonymous"></script>
-          <Navbar />
           <main className='flex min-h-screen flex-col mt-[80px]'>
             {children}
             <Analytics/>
