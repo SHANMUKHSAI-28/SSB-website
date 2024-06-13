@@ -4,26 +4,20 @@ export const navOptions = [
     label: "Home",
     path: "/",
   },
-  {
-    id: "listing",
-    label: "All Products",
-    path: "/product/listing/all-products",
+  
+  { 
+    id: "shopnow", 
+    label: "Shop Now", 
+    submenu: [ 
+      { id: "all-products", label: "All Products", path: "/product/listing/all-products" }, 
+      { id: "retrofit", label: "Retrofit", path: "/product/listing/RetroFit" },
+      { id: "smart-switches", label: "Smart Switches", path: "/product/listing/SmartSwitches" }, 
+      { id: "security", label: "Security", path: "/retrofit-security" } 
+    ] 
   },
-  {
-    id: "listingRetroFit",
-    label: "RetroFit",
-    path: "/product/listing/RetroFit",
-  },
-  {
-    id: "listingSmartSwitches",
-    label: "SmartSwitches",
-    path: "/product/listing/SmartSwitches",
-  },
-  {
-    id: "listingSecurity",
-    label: "Security",
-    path: "/product/listing/Security",
-  },
+  { id: "internships", label: "Internships", path: "https://forms.gle/i1aMbu5EGJJ1xkJL6" },
+  { id: "contact-us", label: "Contact Us", path: "https://docs.google.com/forms/d/e/1FAIpQLScj52_62GUDX1FPdBsm-HPuw_CgH9l5RmVxh-ZNuBSIYfoxVA/viewform?usp=sf_link" },
+  { id: "aboutus", label: "About Us", path: "/aboutus" }, 
 ];
 
 export const adminNavOptions = [
@@ -61,23 +55,6 @@ export const registrationFormControls = [
     label: "Password",
     componentType: "input",
   },
-  /*{
-    id: "role",
-    type: "",
-    placeholder: "",
-    label: "Role",
-    componentType: "select",
-    options: [
-      {
-        id: "admin",
-        label: "Admin",
-      },
-      {
-        id: "customer",
-        label: "customer",
-      },
-    ],
-  },*/
 ];
 
 export const loginFormControls = [

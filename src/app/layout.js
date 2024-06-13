@@ -1,3 +1,8 @@
+// layout.js
+
+// Add the "use client" pragma at the top of the file
+"use client";
+
 import GlobalState from '@/context'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -17,7 +22,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <GlobalState>
           <Navbar />
-          <main className='flex min-h-screen flex-col mt-[-40px]'>
+          <main className='flex min-h-screen flex-col mt-[80px]'>
             {children}
           </main>
           <Footer />
