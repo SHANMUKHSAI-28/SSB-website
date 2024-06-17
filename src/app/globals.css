@@ -39,31 +39,3 @@ body::-webkit-scrollbar-thumb {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* globals.css */
-.contact-us-container {
-  background-color: #ffffff;
-}
-
-.contact-us-container label {
-  color: #333333; /* Ensure the label text color is dark enough to be readable */
-}
-
-.contact-us-container input,
-.contact-us-container textarea {
-  color: #000000; /* Ensure the input and textarea text color is black or another readable color */
-  background-color: #f9f9f9; /* Light background color for better readability */
-  border: 1px solid #cccccc; /* Border color */
-}
-
-.contact-us-container button {
-  background-color: #007BFF; /* Button background color */
-  color: #ffffff; /* Button text color */
-}
-
-.contact-us-container button:hover {
-  background-color: #0056b3; /* Darker background color on hover */
-}
-
-.contact-us-container p {
-  color: #28a745; /* Response message text color */
-}
