@@ -4,7 +4,7 @@ import Notification from "@/components/Notification";
 import { GlobalContext } from "@/context";
 import { getAllOrdersForUser } from "@/services/order";
 import { useRouter } from "next/navigation";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
 
@@ -25,7 +25,6 @@ export default function Orders() {
 
     if (res.success) {
       setPageLevelLoader(false);
-
       setAllOrdersForUser(res.data);
       toast.success(res.message, {
         position: toast.POSITION.TOP_RIGHT,
@@ -39,7 +38,9 @@ export default function Orders() {
   }
 
   useEffect(() => {
-    if (user !== null) extractAllOrders();
+    if (user !== null) {
+      extractAllOrders();
+    }
   }, [user]);
 
   console.log(allOrdersForUser);
@@ -58,64 +59,58 @@ export default function Orders() {
   }
 
   return (
-    <section>
+    <section className="bg-white">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mt-8 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="mt-8 max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div>
             <div className="px-4 py-6 sm:px-8 sm:py-10">
               <div className="flow-root">
                 {allOrdersForUser && allOrdersForUser.length ? (
-                  <ul className="flex flex-col gap-4">
+                  <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {allOrdersForUser.map((item) => (
                       <li
                         key={item._id}
-                        className="bg-gray-200 shadow p-5 flex flex-col space-y-3 py-6 text-left"
+                        className="bg-gray-200 shadow p-6 rounded-xl text-gray-800"
                       >
-                        <div className="flex">
-                          <h1 className="font-bold text-lg mb-3 flex-1">
-                            #order: {item._id}
-                          </h1>
-                          <div className="flex items-center">
-                            <p className="mr-3 text-sm font-medium text-gray-900">
-                              Total paid amount
-                            </p>
-                            <p className="mr-3 text-2xl  font-semibold text-gray-900">
-                            ₹{item.totalPrice}
-                            </p>
-                          </div>
+                        <div className="flex items-center justify-between mb-4">
+                          <h1 className="text-lg font-bold">Order #: {item._id}</h1>
+                          <p className="text-xl font-semibold">₹{item.totalPrice}</p>
                         </div>
-                        <div className="flex gap-2">
+                        <div className="grid grid-cols-2 gap-4">
                           {item.orderItems.map((orderItem, index) => (
-                            <div key={index} className="shrink-0">
+                            <div key={index}>
                               <img
+                                className="h-24 w-full object-cover rounded-lg"
+                                src={orderItem?.product?.imageUrl || ""}
                                 alt="Order Item"
-                                className="h-24 w-24 max-w-full rounded-lg object-cover"
-                                src={
-                                  orderItem &&
-                                  orderItem.product &&
-                                  orderItem.product.imageUrl
-                                }
                               />
                             </div>
                           ))}
                         </div>
-                        <div className="flex gap-5">
-                          <button className="disabled:opacity-50 mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide">
-                            {item.isProcessing
-                              ? "Order is Processing"
-                              : "Order is delivered"}
+                        <div className="flex justify-between mt-4">
+                          <button
+                            className={`bg-black text-white px-4 py-2 text-sm font-medium uppercase rounded ${
+                              item.isProcessing
+                                ? "opacity-50 cursor-not-allowed"
+                                : "hover:bg-gray-800"
+                            }`}
+                            disabled={item.isProcessing}
+                          >
+                            {item.isProcessing ? "Order is Processing" : "Order is Delivered"}
                           </button>
                           <button
+                            className="bg-black text-white px-4 py-2 text-sm font-medium uppercase rounded hover:bg-gray-800"
                             onClick={() => router.push(`/orders/${item._id}`)}
-                            className=" mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
                           >
-                            View Order Details
+                            View Details
                           </button>
                         </div>
                       </li>
                     ))}
                   </ul>
-                ) : null}
+                ) : (
+                  <p className="text-center text-gray-800">No orders found.</p>
+                )}
               </div>
             </div>
           </div>
