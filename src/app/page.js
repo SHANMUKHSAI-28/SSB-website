@@ -28,14 +28,14 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-  <section className="">
-    <div className="grid max-w-screen-xl px-4 py-0 mx-auto -mt-8 lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
-      <div className="mr-auto place-self-center lg:col-span-7">
-        <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl helvetica">
-          SSB Automations
-        </h1>
-            <p className="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
-              Your Space,Upgraded
+      <section className="">
+        <div className="grid max-w-screen-xl px-4 py-0 mx-auto -mt-8 lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
+          <div className="mr-auto place-self-center lg:col-span-7">
+            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
+              SSB Automations
+            </h1>
+            <p className="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl text-gray-900">
+              Your Space, Upgraded
             </p>
 
             <button
@@ -56,10 +56,6 @@ export default function Home() {
 
         <ContactUs />
 
-        
-
-
-        
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
             <div className="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
@@ -103,7 +99,7 @@ export default function Home() {
                               {productItem.name}
                             </h3>
                             <p className="mt-1 text-sm text-gray-800">
-                            ₹{productItem.price}{" "}
+                              ₹{productItem.price}{" "}
                               <span className="text-red-700">{`(-${productItem.priceDrop}%) Off`}</span>
                             </p>
                           </div>
@@ -175,7 +171,6 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      
     </main>
   );
 }
