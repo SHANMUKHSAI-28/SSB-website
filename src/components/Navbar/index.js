@@ -41,7 +41,9 @@ function NavItems({ isModalView = false, isAdminView, router }) {
                   if (item.submenu) {
                     setShowDropdown(!showDropdown);
                   } else {
-                    item.path.startsWith("/") ? router.push(item.path) : (window.location.href = item.path);
+                    item.path.startsWith("/")
+                      ? router.push(item.path)
+                      : (window.location.href = item.path);
                   }
                 }}
               >
@@ -85,7 +87,10 @@ export default function Navbar() {
   console.log(currentUpdatedProduct, "navbar");
 
   useEffect(() => {
-    if (pathName !== "/admin-view/add-product" && currentUpdatedProduct !== null)
+    if (
+      pathName !== "/admin-view/add-product" &&
+      currentUpdatedProduct !== null
+    )
       setCurrentUpdatedProduct(null);
   }, [pathName]);
 
@@ -101,103 +106,84 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white z-0 top-0 left-0 border-b border-gray w-full">
-        <div className="max-w-screen-xl mx-auto p-1 flex flex-wrap items-center justify-between">
-          <div
-            onClick={() => router.push("/")}
-            className="flex items-center cursor-pointer"
-          >
-            <span className="self-center text-2xl font-semibold whitespace-nowrap" style={{ fontFamily: "Helvetica" }}>
-              SSB AUTOMATIONS
-            </span>
-          </div>
-
-          <NavItems router={router} isAdminView={isAdminView} />
-
-          <div className="flex md:order-0 gap-2">
-            {!isAdminView && isAuthUser ? (
-              <Fragment>
+      <nav className="bg-white z-10 top-0 left-0 border-b border-gray w-full">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex-shrink-0 cursor-pointer">
+              <span className="text-2xl font-semibold text-gray-900">SSB AUTOMATIONS</span>
+            </div>
+            <NavItems router={router} isAdminView={isAdminView} />
+            <div className="flex items-center">
+              {!isAdminView && isAuthUser ? (
+                <Fragment>
+                  <button
+                    className="ml-4 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                    onClick={() => router.push("/account")}
+                  >
+                    Account
+                  </button>
+                  <button
+                    className="ml-4 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                    onClick={() => setShowCartModal(true)}
+                  >
+                    Cart
+                  </button>
+                </Fragment>
+              ) : null}
+              {user?.role === "admin" ? (
+                isAdminView ? (
+                  <button
+                    className="ml-4 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                    onClick={() => router.push("/")}
+                  >
+                    Client View
+                  </button>
+                ) : (
+                  <button
+                    className="ml-4 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                    onClick={() => router.push("/admin-view")}
+                  >
+                    Admin View
+                  </button>
+                )
+              ) : null}
+              {isAuthUser ? (
                 <button
-                  className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
-                  }
-                  onClick={() => router.push("/account")}
+                  onClick={handleLogout}
+                  className="ml-4 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                 >
-                  Account
-                </button>
-                <button
-                  className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
-                  }
-                  onClick={() => setShowCartModal(true)}
-                >
-                  Cart
-                </button>
-              </Fragment>
-            ) : null}
-            {user?.role === "admin" ? (
-              isAdminView ? (
-                <button
-                  className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
-                  }
-                  onClick={() => router.push("/")}
-                >
-                  Client View
+                  Logout
                 </button>
               ) : (
                 <button
-                  onClick={() => router.push("/admin-view")}
-                  className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
-                  }
+                  onClick={() => router.push("/login")}
+                  className="ml-4 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                 >
-                  Admin View
+                  Login
                 </button>
-              )
-            ) : null}
-            {isAuthUser ? (
+              )}
               <button
-                onClick={handleLogout}
-                className={
-                  "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
-                }
+                className="ml-4 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-sticky"
+                aria-expanded="false"
+                onClick={() => setShowNavModal(true)}
               >
-                Logout
+                <span className="sr-only">Open main menu</span>
+                <svg
+                  className="w-6 h-6"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
               </button>
-            ) : (
-              <button
-                onClick={() => router.push("/login")}
-                className={
-                  "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
-                }
-              >
-                Login
-              </button>
-            )}
-            <button
-              data-collapse-toggle="navbar-sticky"
-              type="button"
-              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-              aria-controls="navbar-sticky"
-              aria-expanded="false"
-              onClick={() => setShowNavModal(true)}
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="w-6 h-6"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </button>
+            </div>
           </div>
         </div>
       </nav>
