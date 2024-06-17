@@ -1,4 +1,5 @@
-// Import necessary components and hooks
+"use client";
+
 import InputComponent from "@/components/FormElements/InputComponent";
 import ComponentLevelLoader from "@/components/Loader/componentlevel";
 import Notification from "@/components/Notification";
@@ -10,18 +11,17 @@ import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-// Initial form data
-const initialFormData = {
+const initialFormdata = {
   email: "",
   password: "",
 };
 
-// Login component
 export default function Login() {
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState(initialFormdata);
   const {
     isAuthUser,
     setIsAuthUser,
+    user,
     setUser,
     componentLevelLoader,
     setComponentLevelLoader,
@@ -29,7 +29,8 @@ export default function Login() {
 
   const router = useRouter();
 
-  // Check if the form is valid
+  console.log(formData);
+
   function isValidForm() {
     return (
       formData &&
@@ -40,33 +41,35 @@ export default function Login() {
     );
   }
 
-  // Handle login functionality
   async function handleLogin() {
     setComponentLevelLoader({ loading: true, id: "" });
     const res = await login(formData);
 
+    console.log(res);
+
     if (res.success) {
-      toast.success(res.message, { position: toast.POSITION.TOP_RIGHT });
+      toast.success(res.message, {
+        position: toast.POSITION.TOP_RIGHT,
+      });
       setIsAuthUser(true);
       setUser(res?.finalData?.user);
-      setFormData(initialFormData);
+      setFormData(initialFormdata);
       Cookies.set("token", res?.finalData?.token);
       localStorage.setItem("user", JSON.stringify(res?.finalData?.user));
       setComponentLevelLoader({ loading: false, id: "" });
-      router.push("/"); // Redirect to home after successful login
     } else {
-      toast.error(res.message, { position: toast.POSITION.TOP_RIGHT });
+      toast.error(res.message, {
+        position: toast.POSITION.TOP_RIGHT,
+      });
       setIsAuthUser(false);
       setComponentLevelLoader({ loading: false, id: "" });
     }
   }
 
-  // Redirect to home if user is authenticated
   useEffect(() => {
     if (isAuthUser) router.push("/");
   }, [isAuthUser]);
 
-  // Render the login form
   return (
     <div className="bg-white min-h-screen flex items-center justify-center">
       <div className="max-w-md w-full p-8 bg-white shadow-lg rounded-xl">
@@ -92,7 +95,9 @@ export default function Login() {
           )}
           <button
             className={`w-full py-3 bg-black text-white rounded-md uppercase font-medium tracking-wide transition duration-200 ease-in-out ${
-              isValidForm() ? "hover:bg-gray-800" : "opacity-50 cursor-not-allowed"
+              isValidForm()
+                ? "hover:bg-gray-800"
+                : "opacity-50 cursor-not-allowed"
             }`}
             disabled={!isValidForm()}
             onClick={handleLogin}
