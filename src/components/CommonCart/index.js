@@ -1,15 +1,14 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
-import ComponentLevelLoader from "../Loader/componentlevel";
+import { useRouter } from 'next/navigation';
+import ComponentLevelLoader from '../Loader/componentlevel';
 
 export default function CommonCart({
   cartItems = [],
   handleDeleteCartItem,
   componentLevelLoader,
 }) {
-
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <section className="h-screen bg-gray-100">
@@ -25,7 +24,7 @@ export default function CommonCart({
                         className="flex-col flex space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0"
                         key={cartItem.id}
                       >
-                        <div className="shrink-0">
+                        <div className="flex-shrink-0">
                           <img
                             src={
                               cartItem &&
@@ -33,68 +32,69 @@ export default function CommonCart({
                               cartItem.productID.imageUrl
                             }
                             alt="Product image"
-                            className="h-24 w-25 max-w-full rounded-lg object-cover"
+                            className="h-24 w-24 max-w-full rounded-lg object-cover"
                           />
                         </div>
-                        <div className="flex flex-1 flex-col justify-between">
-                          <div className="sm:col-gap-5 sm:grid sm:grid-cols-2">
-                            <div className="pr-8 sm:pr-4">
-                              <p className="text-base font-semibold text-gray-900">
-                                {cartItem &&
-                                  cartItem.productID &&
-                                  cartItem.productID.name}
-                              </p>
-                            </div>
-                            <div className="mt-4 flex gap-3 items-end justify-between sm:mt-0 sm:items-start sm:justify-end">
-                              <p className="shrink-0 w-20 text-base font-semibold text-gray-950 sm:order-1 sm:ml-8 sm:text-right">
+                        <div className="flex flex-1 justify-between sm:col-span-2 sm:flex-col sm:items-start">
+                          <div className="sm:col-span-1 pr-8 sm:pr-4">
+                            <p className="text-base font-semibold text-gray-900">
+                              {cartItem &&
+                                cartItem.productID &&
+                                cartItem.productID.name}
+                            </p>
+                          </div>
+                          <div className="mt-4 flex items-end justify-between sm:mt-0 sm:items-center sm:justify-end sm:col-span-1">
+                            <p className="text-base font-semibold text-gray-900">
                               ₹
-                                {cartItem &&
-                                  cartItem.productID &&
-                                  cartItem.productID.price}
-                              </p>
-                              <button
-                                type="button"
-                                className="font-medium text-yellow-700 sm:order-2"
-                                onClick={() =>
-                                  handleDeleteCartItem(cartItem._id)
-                                }
-                              >
-                                {componentLevelLoader &&
-                                componentLevelLoader.loading &&
-                                componentLevelLoader.id === cartItem._id ? (
-                                  <ComponentLevelLoader
-                                    text={"Removing"}
-                                    color={"#0000000"}
-                                    loading={
-                                      componentLevelLoader &&
-                                      componentLevelLoader.loading
-                                    }
-                                  />
-                                ) : (
-                                  "Remove"
-                                )}
-                              </button>
-                            </div>
+                              {cartItem &&
+                                cartItem.productID &&
+                                cartItem.productID.price}
+                            </p>
+                            <button
+                              type="button"
+                              className="font-medium text-yellow-700"
+                              onClick={() =>
+                                handleDeleteCartItem(cartItem._id)
+                              }
+                            >
+                              {componentLevelLoader &&
+                              componentLevelLoader.loading &&
+                              componentLevelLoader.id === cartItem._id ? (
+                                <ComponentLevelLoader
+                                  text={'Removing'}
+                                  color={'#000000'}
+                                  loading={
+                                    componentLevelLoader &&
+                                    componentLevelLoader.loading
+                                  }
+                                />
+                              ) : (
+                                'Remove'
+                              )}
+                            </button>
                           </div>
                         </div>
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <h1 className="font-bold text-lg">Your cart is Empty !</h1>
+                  <h1 className="font-bold text-lg text-center py-6">
+                    Your cart is Empty!
+                  </h1>
                 )}
               </div>
               <div className="mt-6 border-t border-b py-2">
                 <div className="flex items-center justify-between">
                   <p className="text-sm text-gray-400">Subtotal</p>
                   <p className="text-lg text-black font-semibold">
-                  ₹
+                    ₹
                     {cartItems && cartItems.length
                       ? cartItems.reduce(
-                          (total, item) => item.productID.price + total,
+                          (total, item) =>
+                            item.productID.price + total,
                           0
                         )
-                      : "0"}
+                      : '0'}
                   </p>
                 </div>
                 <div className="flex items-center justify-between">
@@ -104,20 +104,21 @@ export default function CommonCart({
                 <div className="flex items-center justify-between">
                   <p className="text-sm text-gray-400">Total</p>
                   <p className="text-lg text-black font-semibold">
-                  ₹
+                    ₹
                     {cartItems && cartItems.length
                       ? cartItems.reduce(
-                          (total, item) => item.productID.price + total,
+                          (total, item) =>
+                            item.productID.price + total,
                           0
                         )
-                      : "0"}
+                      : '0'}
                   </p>
                 </div>
                 <div className="mt-5 text-center">
                   <button
-                  onClick={()=>router.push('/checkout')}
+                    onClick={() => router.push('/checkout')}
                     disabled={cartItems && cartItems.length === 0}
-                    className="disabled:opacity-50 group inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg text-white font-medium uppercase tracking-wide"
+                    className="group inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg text-white font-medium uppercase tracking-wide disabled:opacity-50"
                   >
                     Checkout
                   </button>

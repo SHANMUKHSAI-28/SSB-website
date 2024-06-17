@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { Fragment, useContext, useEffect } from "react";
-import CommonModal from "../CommonModal";
-import { GlobalContext } from "@/context";
-import { deleteFromCart, getAllCartItems } from "@/services/cart";
-import { toast } from "react-toastify";
-import ComponentLevelLoader from "../Loader/componentlevel";
-import { useRouter } from "next/navigation";
+import { Fragment, useContext, useEffect } from 'react';
+import CommonModal from '../CommonModal';
+import { GlobalContext } from '@/context';
+import { deleteFromCart, getAllCartItems } from '@/services/cart';
+import { toast } from 'react-toastify';
+import ComponentLevelLoader from '../Loader/componentlevel';
+import { useRouter } from 'next/navigation';
 
 export default function CartModal() {
   const {
@@ -32,7 +32,7 @@ export default function CartModal() {
               productID: {
                 ...item.productID,
                 price:
-                  item.productID.onSale === "yes"
+                  item.productID.onSale === 'yes'
                     ? parseInt(
                         (
                           item.productID.price -
@@ -44,7 +44,7 @@ export default function CartModal() {
             }))
           : [];
       setCartItems(updatedData);
-      localStorage.setItem("cartItems", JSON.stringify(updatedData));
+      localStorage.setItem('cartItems', JSON.stringify(updatedData));
     }
 
     console.log(res);
@@ -59,7 +59,7 @@ export default function CartModal() {
     const res = await deleteFromCart(getCartItemID);
 
     if (res.success) {
-      setComponentLevelLoader({ loading: false, id: "" });
+      setComponentLevelLoader({ loading: false, id: '' });
       toast.success(res.message, {
         position: toast.POSITION.TOP_RIGHT,
       });
@@ -106,7 +106,7 @@ export default function CartModal() {
                       </h3>
                     </div>
                     <p className="mt-1 text-sm text-gray-600">
-                    ₹
+                      ₹
                       {cartItem &&
                         cartItem.productID &&
                         cartItem.productID.price}
@@ -122,14 +122,15 @@ export default function CartModal() {
                       componentLevelLoader.loading &&
                       componentLevelLoader.id === cartItem._id ? (
                         <ComponentLevelLoader
-                          text={"Removing"}
-                          color={"#000000"}
+                          text={'Removing'}
+                          color={'#000000'}
                           loading={
-                            componentLevelLoader && componentLevelLoader.loading
+                            componentLevelLoader &&
+                            componentLevelLoader.loading
                           }
                         />
                       ) : (
-                        "Remove"
+                        'Remove'
                       )}
                     </button>
                   </div>
@@ -144,7 +145,7 @@ export default function CartModal() {
           <button
             type="button"
             onClick={() => {
-              router.push("/cart");
+              router.push('/cart');
               setShowCartModal(false);
             }}
             className="mt-1.5 w-full inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
@@ -155,7 +156,7 @@ export default function CartModal() {
             disabled={cartItems && cartItems.length === 0}
             type="button"
             onClick={() => {
-              router.push("/checkout");
+              router.push('/checkout');
               setShowCartModal(false);
             }}
             className="mt-1.5 w-full inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide disabled:opacity-50"
@@ -163,9 +164,8 @@ export default function CartModal() {
             Checkout
           </button>
           <div className="mt-6 flex justify-center text-center text-sm text-gray-600">
-            <button type="button" className="font-medium text-grey">
-              Continue Shopping
-              <span aria-hidden="true"> &rarr;</span>
+            <button type="button" className="font-medium text-gray-600">
+              Continue Shopping <span aria-hidden="true">&rarr;</span>
             </button>
           </div>
         </Fragment>
