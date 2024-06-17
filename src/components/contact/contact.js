@@ -1,4 +1,3 @@
-// components/contact/contact.js
 'use client';
 
 import { useRef, useState } from 'react';
@@ -41,7 +40,7 @@ const ContactUs = ({ userID }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto my-8 p-4 border rounded shadow-lg">
+    <div className="contact-us-container max-w-md mx-auto my-8 p-4 border rounded shadow-lg">
       <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -49,7 +48,7 @@ const ContactUs = ({ userID }) => {
           <input
             type="text"
             id="name"
-            className="w-full px-3 py-2a border rounded"
+            className="w-full px-3 py-2 border rounded"
             ref={nameRef}
             required
           />
@@ -92,7 +91,6 @@ const ContactUs = ({ userID }) => {
         </button>
       </form>
       {responseMessage && <p className="mt-4 text-green-500">{responseMessage}</p>}
-      
     </div>
   );
 };
