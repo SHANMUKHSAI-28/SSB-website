@@ -1,3 +1,4 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,7 +40,12 @@ body::-webkit-scrollbar-thumb {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+/* Ensure all text color is black */
+body, h1, h2, h3, h4, h5, h6, p, span, a, li, input, textarea, button, label {
+  color: black !important;
+}
+
 /* Ensure input text color is black */
-input {
+input, textarea {
   color: black !important;
 }
