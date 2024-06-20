@@ -127,21 +127,20 @@ export default function Account() {
         <div className="bg-white shadow">
           <div className="p-6 sm:p-12">
             <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
-              {/* Random user image rendering */}
+              <div className="flex flex-col flex-1">
+                <h4 className="text-lg font-semibold text-center md:text-left text-black">
+                  {user?.name}
+                </h4>
+                <p className="text-black">{user?.email}</p>
+                <p className="text-black">{user?.role}</p>
+              </div>
+              <button
+                onClick={() => router.push("/orders")}
+                className="mt-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+              >
+                View Your Orders
+              </button>
             </div>
-            <div className="flex flex-col flex-1">
-              <h4 className="text-lg font-semibold text-center md:text-left">
-                {user?.name}
-              </h4>
-              <p>{user?.email}</p>
-              <p>{user?.role}</p>
-            </div>
-            <button
-              onClick={() => router.push("/orders")}
-              className="mt-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
-            >
-              View Your Orders
-            </button>
             <div className="mt-6">
               <h1 className="font-bold text-lg">Your Addresses :</h1>
               {pageLevelLoader ? (
