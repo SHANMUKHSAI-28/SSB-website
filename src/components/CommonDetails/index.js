@@ -106,7 +106,9 @@ export default function CommonDetails({ item }) {
                   </a>
                 </nav>
               </div>
-              <div className="mt-8 flow-root sm:mt-12">{item && item.description}</div>
+              <div className="mt-8 flow-root sm:mt-12">
+                <div className="text-black">{item && item.description}</div>
+              </div>
             </div>
           </div>
         </div>
