@@ -39,3 +39,6 @@ body::-webkit-scrollbar-thumb {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.text-black {
+  color: #000000; /* Black color */
+}
