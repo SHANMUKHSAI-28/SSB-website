@@ -31,7 +31,7 @@ export default function Account() {
 
   const [showAddressForm, setShowAddressForm] = useState(false);
   const [currentEditedAddressId, setCurrentEditedAddressId] = useState(null);
-  const router = useRouter()
+  const router = useRouter();
 
   async function extractAllAddresses() {
     setPageLevelLoader(true);
@@ -39,7 +39,6 @@ export default function Account() {
 
     if (res.success) {
       setPageLevelLoader(false);
-
       setAddresses(res.data);
     }
   }
@@ -128,7 +127,7 @@ export default function Account() {
         <div className="bg-white shadow">
           <div className="p-6 sm:p-12">
             <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
-              {/* we have render random user image here */}
+              {/* Random user image rendering */}
             </div>
             <div className="flex flex-col flex-1">
               <h4 className="text-lg font-semibold text-center md:text-left">
@@ -137,7 +136,10 @@ export default function Account() {
               <p>{user?.email}</p>
               <p>{user?.role}</p>
             </div>
-            <button onClick={()=>router.push('/orders')} className="mt-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide">
+            <button
+              onClick={() => router.push("/orders")}
+              className="mt-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+            >
               View Your Orders
             </button>
             <div className="mt-6">
@@ -154,11 +156,11 @@ export default function Account() {
                   {addresses && addresses.length ? (
                     addresses.map((item) => (
                       <div className="border p-6" key={item._id}>
-                        <p>Name : {item.fullName}</p>
-                        <p>Address : {item.address}</p>
-                        <p>City : {item.city}</p>
-                        <p>Country : {item.country}</p>
-                        <p>PostalCode : {item.postalCode}</p>
+                        <p className="text-black">Name : {item.fullName}</p>
+                        <p className="text-black">Address : {item.address}</p>
+                        <p className="text-black">City : {item.city}</p>
+                        <p className="text-black">Country : {item.country}</p>
+                        <p className="text-black">PostalCode : {item.postalCode}</p>
                         <button
                           onClick={() => handleUpdateAddress(item)}
                           className="mt-5 mr-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
@@ -167,7 +169,7 @@ export default function Account() {
                         </button>
                         <button
                           onClick={() => handleDelete(item._id)}
-                          className="mt-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+                          className="mt-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
                         >
                           {componentLevelLoader &&
                           componentLevelLoader.loading &&
@@ -187,7 +189,7 @@ export default function Account() {
                       </div>
                     ))
                   ) : (
-                    <p>No address found ! Please add a new address below</p>
+                    <p className="text-black">No address found! Please add a new address below</p>
                   )}
                 </div>
               )}
@@ -195,7 +197,7 @@ export default function Account() {
             <div className="mt-4">
               <button
                 onClick={() => setShowAddressForm(!showAddressForm)}
-                className="mt-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+                className="mt-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
               >
                 {showAddressForm ? "Hide Address Form" : "Add New Address"}
               </button>
@@ -205,6 +207,7 @@ export default function Account() {
                 <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8">
                   {addNewAddressFormControls.map((controlItem) => (
                     <InputComponent
+                      key={controlItem.id}
                       type={controlItem.type}
                       placeholder={controlItem.placeholder}
                       label={controlItem.label}
@@ -220,7 +223,7 @@ export default function Account() {
                 </div>
                 <button
                   onClick={handleAddOrUpdateAddress}
-                  className="mt-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+                  className="mt-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
                 >
                   {componentLevelLoader && componentLevelLoader.loading ? (
                     <ComponentLevelLoader
