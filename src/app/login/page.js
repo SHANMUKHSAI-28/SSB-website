@@ -73,7 +73,7 @@ export default function Login() {
   return (
     <div className="bg-white min-h-screen flex items-center justify-center">
       <div className="max-w-md w-full p-8 bg-white shadow-lg rounded-xl">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-gray-900">Login</h2>
+        <h2 className="text-3xl font-semibold text-center mb-6 text-black">Login</h2>
         <div className="space-y-6">
           {loginFormControls.map((controlItem) =>
             controlItem.componentType === "input" ? (
@@ -89,7 +89,7 @@ export default function Login() {
                     [controlItem.id]: event.target.value,
                   })
                 }
-                inputClassName="w-full px-3 py-2 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:border-black"
+                inputClassName="w-full px-3 py-2 text-black border border-gray-300 rounded-md focus:outline-none focus:border-black"
               />
             ) : null
           )}
@@ -113,7 +113,7 @@ export default function Login() {
             )}
           </button>
           <div className="flex flex-col gap-2">
-            <p className="text-gray-900">New to the website?</p>
+            <p className="text-black">New to the website?</p>
             <button
               className="w-full py-3 bg-black text-white rounded-md uppercase font-medium tracking-wide transition duration-200 ease-in-out hover:bg-gray-800"
               onClick={() => router.push("/register")}
