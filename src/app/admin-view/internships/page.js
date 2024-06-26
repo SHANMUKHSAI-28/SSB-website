@@ -23,22 +23,22 @@ const InternshipsPage = () => {
     };
 
     return (
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-            <h1 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '20px' }}>Internships are shown here</h1>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
+            <h1 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '20px', color: 'black' }}>Our Internships</h1>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
                 {internships.map(internship => (
-                    <li key={internship._id} style={{ backgroundColor: '#f9f9f9', border: '1px solid #ddd', padding: '20px', marginBottom: '20px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}>
-                        <img src={internship.imageUrl} alt={internship.title} style={{ maxWidth: '100%', height: 'auto', borderRadius: '4px', marginBottom: '10px' }} />
-                        <h2 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>Title: {internship.title}</h2>
-                        <p style={{ margin: '5px 0' }}>Description: {internship.description}</p>
-                        <p style={{ margin: '5px 0' }}>Company: {internship.company}</p>
-                        <p style={{ margin: '5px 0' }}>Location: {internship.location}</p>
-                        <p style={{ margin: '5px 0' }}>Duration: {internship.duration}</p>
-                        <p style={{ margin: '5px 0' }}>Stipend: {internship.stipend}</p>
+                    <div key={internship._id} style={{ flex: '1 1 calc(33.333% - 20px)', backgroundColor: '#f9f9f9', border: '1px solid #ddd', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', color: 'black' }}>
+                        <img src={internship.imageUrl} alt={internship.title} style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '4px', marginBottom: '10px' }} />
+                        <h2 style={{ fontSize: '1.5rem', marginBottom: '10px', color: 'black' }}>Title: {internship.title}</h2>
+                        <p style={{ margin: '5px 0', color: 'black' }}>Description: {internship.description}</p>
+                        <p style={{ margin: '5px 0', color: 'black' }}>Company: {internship.company}</p>
+                        <p style={{ margin: '5px 0', color: 'black' }}>Location: {internship.location}</p>
+                        <p style={{ margin: '5px 0', color: 'black' }}>Duration: {internship.duration}</p>
+                        <p style={{ margin: '5px 0', color: 'black' }}>Stipend: {internship.stipend}</p>
                         <button onClick={() => handleApplyNow('https://forms.gle/RTKTFVtL5YzTUMKQ7')} style={{ backgroundColor: '#007bff', color: '#fff', padding: '8px 16px', borderRadius: '4px', border: 'none', cursor: 'pointer', marginTop: '10px' }}>Apply Now</button>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
