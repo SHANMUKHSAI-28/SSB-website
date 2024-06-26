@@ -28,7 +28,7 @@ const InternshipsPage = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
                 {internships.map(internship => (
                     <div key={internship._id} style={{ flex: '1 1 calc(33.333% - 20px)', backgroundColor: '#f9f9f9', border: '1px solid #ddd', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', color: 'black' }}>
-                        <img src={internship.imageUrl} alt={internship.title} style={{ width: '100%', maxHeight: '350px', objectFit: 'contain', borderRadius: '4px', marginBottom: '10px' }} />
+                        <img src={internship.imageUrl} alt={internship.title} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px', marginBottom: '10px' }} />
                         <h2 style={{ fontSize: '1.5rem', marginBottom: '10px', color: 'black' }}>Title: {internship.title}</h2>
                         <p style={{ margin: '5px 0', color: 'black', whiteSpace: 'pre-line' }}><strong>Description:</strong> {internship.description}</p>
                         <p style={{ margin: '5px 0', color: 'black' }}><strong>Company:</strong> {internship.company}</p>
