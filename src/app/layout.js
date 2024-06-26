@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '../components/Footer/Footer';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import InternshipsPage from './admin-view/internships/page';
 
 
 const inter = Inter({ subsets: ['latin'] })

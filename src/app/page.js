@@ -5,6 +5,7 @@ import { getAllAdminProducts } from "@/services/product";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import ContactUs from '../components/contact/contact';
+import InternshipsPage from "./admin-view/internships/page";
 
 export default function Home() {
   const { isAuthUser } = useContext(GlobalContext);
@@ -53,6 +54,8 @@ export default function Home() {
             />
           </div>
         </div>
+
+        <InternshipsPage />
 
         <ContactUs />
 
