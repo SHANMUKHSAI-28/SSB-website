@@ -1,4 +1,4 @@
- "use client";
+"use client";
 import React, { useState } from 'react';
 import { addInternship } from '../../../services/internship';
 import { initializeApp } from 'firebase/app';
@@ -14,7 +14,6 @@ const firebaseConfig = {
   appId: "1:764868890336:web:f5cfecafa20e3e94480a85",
   measurementId: "G-4L8V3GPBGJ"
 };
-
 
 export const firebaseStroageURL =
   "gs://ssb-automations.appspot.com";
@@ -158,6 +157,7 @@ const AddInternshipPage = () => {
           font-size: 16px;
           border: 1px solid #ccc;
           border-radius: 4px;
+          color: black; /* Set text color to black */
         }
         .submit-button {
           background-color: #007bff;

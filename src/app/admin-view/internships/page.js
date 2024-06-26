@@ -24,7 +24,7 @@ const InternshipsPage = () => {
 
     return (
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
-            <h1 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '20px', color: 'black' }}>Internships are shown here</h1>
+            <h1 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '20px', color: 'black' }}>Our Internships</h1>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
                 {internships.map(internship => (
                     <div key={internship._id} style={{ flex: '1 1 calc(33.333% - 20px)', backgroundColor: '#f9f9f9', border: '1px solid #ddd', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', color: 'black' }}>
