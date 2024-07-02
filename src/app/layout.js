@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1080280280607971"crossorigin="anonymous"></script>
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1080280280607971"crossorigin="anonymous"></script>
-          <main className='flex min-h-screen flex-col mt-[80px]'>
+          <main className='flex min-h-screen flex-col mt-[0px]'>
             {children}
             <Analytics/>
             <SpeedInsights/>
