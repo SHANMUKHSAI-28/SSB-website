@@ -18,7 +18,7 @@ export const navOptions = [
   { id: "internships", label: "Internships", path: "https://forms.gle/RTKTFVtL5YzTUMKQ7" },
   { id: "contact-us", label: "Contact Us", path: "https://docs.google.com/forms/d/e/1FAIpQLScj52_62GUDX1FPdBsm-HPuw_CgH9l5RmVxh-ZNuBSIYfoxVA/viewform?usp=sf_link" },
   { id: "aboutus", label: "About Us", path: "/aboutus" },
-  { id: "Verify", label: "Verify Certificate", path: "/aboutus" }, 
+  { id: "Verify", label: "Verify", path: "/aboutus" }, 
 ];
 
 export const adminNavOptions = [
