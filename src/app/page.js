@@ -49,7 +49,7 @@ export default function Home() {
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/new%20logos%2F2.png?alt=media&token=fd8b38d0-2dca-46df-b408-66f665f43fe8"
+              src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/Images%2Finverted-logo.jpg?alt=media&token=5d1a903e-d0b8-4133-beeb-fdfdd0371428"
               alt="Get Started"
             />
           </div>
