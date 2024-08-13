@@ -73,7 +73,7 @@ export default function Home() {
 
         <InternshipsPage />
 
-        <ContactUs />
+        
 
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
@@ -189,6 +189,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
+        <ContactUs />
       </section>
     </main>
   );
