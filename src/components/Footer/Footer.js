@@ -29,6 +29,11 @@ const Footer = () => {
                   Contact Us
                 </a>
               </li>
+              <li>
+                <a href="/aboutus" className="hover:text-gray-400">
+                Terms & Conditions
+                </a>
+              </li>
             </ul>
           </div>
           <div className="w-full lg:w-1/3 mt-4 lg:mt-0 text-center lg:text-right">

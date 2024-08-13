@@ -55,6 +55,22 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Company Introduction */}
+      <section className="px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold text-gray-800">
+            About SSB Automations
+          </h2>
+          <p className="mt-4 text-lg text-gray-600">
+            At SSB Automations, we specialize in providing advanced solutions
+            for home and business automation. Our products are designed to
+            enhance your lifestyle by offering convenience, security, and
+            energy efficiency. Join us in making your spaces smarter and more
+            efficient.
+          </p>
+        </div>
+      </section>
+
         <InternshipsPage />
 
         <ContactUs />
