@@ -18,7 +18,7 @@ export async function POST(req) {
         line_items: res,
         mode: "payment",
         success_url: "https://ssbautomations.com/checkout" + "?status=success",
-        cancel_url: "http://ssbautomations.com/checkout" + "?status=cancel",
+        cancel_url: "https://ssbautomations.com/checkout" + "?status=cancel",
       });
 
       return NextResponse.json({
