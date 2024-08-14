@@ -85,7 +85,7 @@ export default function Home() {
                   </h2>
                 </div>
                 <button
-                  onClick={() => router.push("http://ssbautomations.com/product/listing/all-products")}
+                  onClick={() => router.push("https://ssbautomations.com/product/listing/all-products")}
                   className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                 >
                   Shop ALL
