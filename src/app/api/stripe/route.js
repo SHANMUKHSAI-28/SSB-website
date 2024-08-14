@@ -17,8 +17,8 @@ export async function POST(req) {
         payment_method_types: ["card"],
         line_items: res,
         mode: "payment",
-        success_url: "https://www.ssblinktech.me/checkout" + "?status=success",
-        cancel_url: "https://www.ssblinktech.me/checkout" + "?status=cancel",
+        success_url: "https://ssbautomations.com/checkout" + "?status=success",
+        cancel_url: "http://ssbautomations.com/checkout" + "?status=cancel",
       });
 
       return NextResponse.json({
