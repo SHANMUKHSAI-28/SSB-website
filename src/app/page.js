@@ -36,7 +36,7 @@ export default function Home() {
               SSB Automations
             </h1>
             <p className="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl text-gray-900">
-              Your Space, Upgraded
+              Your Space, Upgraded.
             </p>
 
             <button
