@@ -38,6 +38,8 @@ export default function Home() {
             <p className="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl text-gray-900">
               Your Space, Upgraded.
             </p>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1080280280607971"
+     crossorigin="anonymous"></script>
 
             <button
               type="button"
