@@ -9,7 +9,7 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'SSB Automations | Best Home Automations Company',
+  title: 'HOMOVATE | Best Home Automations Company',
   description: 'Your Space, Upgraded',
 };
 

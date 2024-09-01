@@ -33,7 +33,7 @@ export default function Home() {
         <div className="grid max-w-screen-xl px-4 py-0 mx-auto -mt-8 lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
-              SSB Automations
+              HOMOVATE
             </h1>
             <p className="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl text-gray-900">
               Your Space, Upgraded.
@@ -70,10 +70,10 @@ export default function Home() {
         <section className="px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold text-gray-800">
-              About SSB Automations
+              About HOMOVATE
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              At SSB Automations, we specialize in providing advanced solutions
+              At HOMOVATE, we specialize in providing advanced solutions
               for home and business automation. Our products are designed to
               enhance your lifestyle by offering convenience, security, and
               energy efficiency. Join us in making your spaces smarter and more
