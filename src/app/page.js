@@ -90,7 +90,7 @@ export default function Home() {
               <div className="max-w-md mx-auto text-center lg:text-left">
                 <div>
                   <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-                    Newly launched
+                    Newly launched Products
                   </h2>
                 </div>
                 <button
