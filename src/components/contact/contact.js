@@ -53,7 +53,7 @@ const ContactUs = ({ userID }) => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="HOMOVATE Location"
+              title="SSB Automations Location"
               className="w-full h-full"
             ></iframe>
           </div>

@@ -1,13 +1,6 @@
-bcryptjs
-firebase
-joi
-js-cookie
-jsonwebtoken
-mongoose
-react-toastify
-stripe
-@stripe/stripe-js
-@headlessui/react
-react-icons
-@vercel/analytics
-@vercel/speed-insights
+npm i bcryptjs firebase joi js-cookie jsonwebtoken mongoose react-toastify stripe @stripe/stripe-js @headlessui/react react-icons @vercel/analytics @vercel/speed-insights
+
+
+npm install react-icons
+npm i @vercel/analytics
+npm i @vercel/speed-insights
