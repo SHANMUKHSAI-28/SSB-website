@@ -56,24 +56,22 @@ export default function Home() {
         </div>
 
         {/* Company Introduction */}
-      <section className="px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-800">
-            About SSB Automations
-          </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            At SSB Automations, we specialize in providing advanced solutions
-            for home and business automation. Our products are designed to
-            enhance your lifestyle by offering convenience, security, and
-            energy efficiency. Join us in making your spaces smarter and more
-            efficient.
-          </p>
-        </div>
-      </section>
+        <section className="px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-extrabold text-gray-800">
+              About SSB Automations
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              At SSB Automations, we specialize in providing advanced solutions
+              for home and business automation. Our products are designed to
+              enhance your lifestyle by offering convenience, security, and
+              energy efficiency. Join us in making your spaces smarter and more
+              efficient.
+            </p>
+          </div>
+        </section>
 
         <InternshipsPage />
-
-        
 
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
@@ -137,7 +135,7 @@ export default function Home() {
           </div>
           <ul className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
             <li>
-              <div className="relative block group">
+              <div className="relative block group border border-black">
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/Images%2Fcoverimages%2Fretrocover.jpg?alt=media&token=e8cd4e49-bca2-405b-a6f6-462c37189fba"
                   className="object-cover w-full aspect-square"
@@ -154,7 +152,7 @@ export default function Home() {
               </div>
             </li>
             <li>
-              <div className="relative block group">
+              <div className="relative block group border border-black">
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/Images%2Fcoverimages%2Fsmartswitches.png?alt=media&token=6fe730f6-516e-4aa2-a4c8-8b11e2aa5dd5"
                   className="object-cover w-full aspect-square"
@@ -171,15 +169,15 @@ export default function Home() {
               </div>
             </li>
             <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-              <div className="relative block group">
+              <div className="relative block group border border-black">
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/ssb-automations.appspot.com/o/Images%2Fcoverimages%2Fsecurity.png?alt=media&token=453869e8-e817-41b5-9c23-be298dcd8c62"
                   className="object-cover w-full aspect-square"
                 />
                 <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                  <h3 className="text-xl font-medium text-white">SmartSwitches</h3>
+                  <h3 className="text-xl font-medium text-white">Security Systems</h3>
                   <button
-                    onClick={() => router.push("/product/listing/SmartSwitches")}
+                    onClick={() => router.push("/product/listing/SecuritySystems")}
                     className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                   >
                     Shop Now
