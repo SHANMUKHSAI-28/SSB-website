@@ -24,10 +24,15 @@ export default function Home() {
     <main className="flex flex-col min-h-screen bg-white p-8">
       {/* Hero Section */}
       <section className="relative flex flex-col items-center text-center p-12 bg-cover bg-center bg-hero-pattern rounded-lg shadow-lg">
-        <h1 className="text-6xl font-extrabold text-white mb-4">🚀 SSB Automations</h1>
-        <p className="text-lg font-semibold text-white mb-6">
-          Leading Solutions in Embedded Systems, AI, and More!
-        </p>
+      <h1 className="text-6xl font-extrabold text-primaryText font-sans">
+  🚀 SSB Automations
+</h1>
+<p className="text-lg font-semibold text-secondaryText font-sans">
+  Leading Solutions in Embedded Systems, AI, and More!
+</p>
+
+
+
         <button
           className="bg-blue-600 hover:bg-blue-800 px-8 py-4 text-lg font-bold uppercase text-white rounded-lg shadow-md"
           onClick={() => router.push("/contact")}
