@@ -43,26 +43,49 @@ export default function Home() {
 
       {/* Technologies & Services Section */}
       <section className="py-12">
-        <h2 className="text-4xl font-bold text-center mb-10">💻 Our Expertise</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { title: "Embedded Systems", icon: "images/embedded.jpg" },
-            { title: "VLSI", icon: "/icons/vlsi.svg" },
-            { title: "App Development", icon: "/icons/app.svg" },
-            { title: "IoT Solutions", icon: "/icons/iot.svg" },
-            { title: "Web Development", icon: "/icons/web.svg" },
-            { title: "AI & ML", icon: "/icons/ai.svg" },
-          ].map((service, index) => (
-            <div
-              key={index}
-              className="p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center space-x-4"
-            >
-              <img src={service.icon} alt={service.title} className="w-16 h-16" />
-              <h3 className="text-2xl font-semibold text-gray-800">{service.title}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
+  <h2 className="text-4xl font-bold text-center mb-10">💻 Our Expertise</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {[
+      {
+        title: "Embedded Systems",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Embedded_system_board.jpg/1024px-Embedded_system_board.jpg",
+      },
+      {
+        title: "VLSI",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/3/3c/VLSI_Chip.jpg",
+      },
+      {
+        title: "App Development",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Android_Studio_icon.svg/1024px-Android_Studio_icon.svg.png",
+      },
+      {
+        title: "IoT Solutions",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/IoT_Internet_of_Things.jpg/1024px-IoT_Internet_of_Things.jpg",
+      },
+      {
+        title: "Web Development",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png",
+      },
+      {
+        title: "AI & ML",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Artificial_intelligence_%26_machine_learning.jpg",
+      },
+    ].map((service, index) => (
+      <div
+        key={index}
+        className="p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center space-x-4"
+      >
+        <img
+          src={service.icon}
+          alt={service.title}
+          className="w-16 h-16 object-cover rounded-md"
+        />
+        <h3 className="text-2xl font-semibold text-gray-800">{service.title}</h3>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* Featured Products Carousel */}
       {products && products.length > 0 && (

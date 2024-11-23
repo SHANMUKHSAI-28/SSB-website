@@ -62,7 +62,7 @@ export default function AboutUs() {
                 imageUrl="https://via.placeholder.com/150"
               />
               <TeamMember 
-                name="Vamsi Saripudi"
+                name="Benny Samuel"
                 role="Lead Software Engineer"
                 imageUrl="https://via.placeholder.com/150"
               />
